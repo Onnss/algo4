@@ -1,0 +1,23 @@
+ALGORITHM algo4
+VAR
+    i,i1,j: INTEGER;
+    A: ARRAY_OF INTEGER[n]
+BEGIN
+    WRITE ("taper longueur tableau ");
+    Read(n);
+    WRITE ("entrer le tableau ")
+    FOR i1 FROM 0 TO n-1 STEP 1  DO
+        Read(A[i1]);
+    END_FOR
+
+    FOR i FROM 1 TO n-1 DO
+        key:= A[i];
+        j:= i-1;
+
+        WHILE (j>= 0 AND A[j] > key ) DO
+            A[j+1] := A[j];
+            j:=j-1;
+        END_WHILE
+    END_FOR
+    RETURN A ;
+END
